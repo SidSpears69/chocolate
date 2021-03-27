@@ -1,0 +1,25 @@
+.products-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -7.5px;
+  padding: 0;
+  padding-bottom: 32px;
+  @media (min-width: @desktop-width) {
+    margin: -42px -5px;
+    padding-bottom: 42px;
+  }
+}
+.products-list__item {
+  padding: 7.5px;
+  width: 50%;
+  @media (min-width: @tablet-width) {
+    width: 100%/3;
+  }
+  @media (min-width: @desktop-width) {
+    width: 380px;
+    padding: 42px 5px;
+  }
+}
+

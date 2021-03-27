@@ -1,0 +1,28 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #382f2d;
+  background-color: #F5F5F5;
+  line-height: 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+* {
+  box-sizing: border-box;
+}
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+@import "page-main.less";
+@import "variables.less";
+@import "button.less";
+@import "filter.less";
+@import "products-list.less";
+@import "product-card.less";
+@import "pagination.less";
