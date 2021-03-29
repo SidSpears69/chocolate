@@ -1,12 +1,16 @@
-.page-main {
+.page-main__wrapper {
+  &--bg {
+    background-color: #f5f5f5;
+  }
+  &--border {
+    border-top: 1px solid @grey-stroke;
+  }
+}
+.page-main__section {
+  max-width: 1180px;
+  margin: 0 auto;
   padding: 0 15px;
   @media (min-width: @desktop-width) {
     padding: 0;
   }
-}
-.page-main__filter {
-  margin: 0;
-}
-.page-main__pagination {
-  margin: 0;
 }

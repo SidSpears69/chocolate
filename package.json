@@ -1,8 +1,8 @@
 {
-  "name": "ueec",
+  "name": "chocolate",
   "version": "1.0.0",
   "private": true,
-  "description": "Сайт для Украинского Инженерно-Экспертного Центра",
+  "description": "Сайт Саровского Шоколада",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "10.2.x",

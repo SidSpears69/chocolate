@@ -1,0 +1,41 @@
+.custom-number {
+  background: @white;
+  border: 1px solid @grey-stroke;
+  padding: 4px 0;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  line-height: 38px;
+}
+.custom-number__button {
+  width: 23px;
+  height: 38px;
+  @media (min-width: @desktop-width) {
+    &:hover,
+    &:focus {
+      color: @accent;
+    }
+  }
+}
+.custom-number__input {
+  width: 38px;
+  font: inherit;
+  color: inherit;
+  -moz-appearance: textfield;
+  text-align: center;
+  border: 0;
+  border-left: 1px solid fade(@grey-stroke, 50%);
+  border-right: 1px solid fade(@grey-stroke, 50%);
+  outline: none;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media (min-width: @desktop-width) {
+  &:hover,
+  &:focus {
+    color: @accent;
+}
+}
+}

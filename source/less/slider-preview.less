@@ -1,0 +1,35 @@
+.slider-preview__wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.slider-preview__slide {
+  width: 160px;
+  height: 43.245vw;
+  background-color: @white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  margin-bottom: 1px;
+  @media (min-width: 550px) {
+    height: 29.093vw;
+  }
+  @media (min-width: @tablet-width) {
+    width: 127px;
+    height: 13.977vw;
+  }
+  @media (min-width: @desktop-width) {
+    height: 127px;
+    cursor: pointer;
+  }
+  &--active {
+    border-color: @accent;
+  }
+}
+.slider-preview__img {
+  max-height: 100%;
+  object-fit: contain;
+}
