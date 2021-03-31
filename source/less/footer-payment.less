@@ -1,0 +1,30 @@
+.footer-payment {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+
+  @media(min-width: @tablet-width) {
+    order: 5;
+  }
+
+  @media(min-width: @desktop-width) {
+    position: absolute;
+    top: 300px;
+    right: 0;
+    width: 310px;
+  }
+
+}
+
+.footer-payment__item {
+  margin-right: 20px;
+  margin-bottom: 27px;
+
+  &:first-child {
+    margin-right: 25px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

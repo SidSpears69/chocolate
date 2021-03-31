@@ -1,0 +1,147 @@
+.social-network {
+  width: 100%;
+  @media (min-width: @desktop-width) {
+    width: 236px;
+  }
+}
+
+.social-network__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @accent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    height: 100%;
+    width: 15px;
+    background-color: @accent;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    background-color: @accent;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 55px;
+    flex-direction: column;
+
+  }
+}
+
+.social-network__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-network__title {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.social-network__btn {
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: inherit;
+  @media (min-width: @desktop-width) {
+
+    &:hover,
+    &:focus {
+      background-color: @dark-text;
+      color: @white;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
+
+.social-network__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  &--vk {
+    margin-top: -5px;
+    margin-left: -10px;
+  }
+
+  &--fb {
+    margin-top: -8px;
+    margin-left: -4px;
+  }
+
+  &--inst {
+    margin-top: -9px;
+    margin-left: -9px;
+  }
+}
+
+.social-network__description {
+  display: none;
+  margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding: 0 15px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.social-network-description__title {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 27px;
+  margin-bottom: 10px;
+}
+
+.social-network-description__text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+  @media (min-width: @desktop-width) {
+    width: 256px;
+  }
+}

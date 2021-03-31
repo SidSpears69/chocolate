@@ -1,0 +1,25 @@
+.footer-copyright {
+  width: 100%;
+  text-align: center;
+  @media(min-width: @tablet-width) {
+    order: 10;
+  }
+}
+
+.footer-copyright__link {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @grey-text;
+  font-weight: 600;
+  padding: 21px 0;
+  border-top: 1px solid fade(@dark-text, 10%);
+  display: block;
+  @media(min-width: @desktop-width) {
+    &:hover,
+    &:focus {
+      color: @accent;
+    }
+  }
+}

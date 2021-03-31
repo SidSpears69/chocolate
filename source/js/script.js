@@ -3,7 +3,75 @@ const previewSlides = document.querySelectorAll(".slider-preview__slide");
 const productImg = document.querySelector(".product-images__img");
 const customNumber = document.querySelector(".custom-number");
 const tabsToggle = document.querySelectorAll(".tabs__toggle");
-const sliderPreview = new Swiper(".slider-preview", {
+const menuToggle = document.querySelector('.menu__toggle')
+const siteList = document.querySelector('.site-list')
+const submenuToggle = document.querySelectorAll('.menu__link--with-submenu');
+const productsToggle = document.querySelectorAll('.submenu__link--with-products');
+const productsMenu = document.querySelectorAll('.submenu-products');
+const desktopVersion = window.matchMedia("(min-width: 1200px)").matches;
+
+menuToggle.addEventListener('click', (evt) => {
+  const toggler = evt.target;
+  toggler.getAttribute("aria-expanded") == "false" ? toggler.setAttribute("aria-expanded", true) : toggler.setAttribute("aria-expanded", false);
+  submenuToggle.forEach(item => {
+    item.setAttribute("aria-expanded", false);
+  })
+})
+function controlGroupAttributes(elements, item, attribute) {
+  item.addEventListener("click", (evt) => {
+    elements.forEach(item => {
+      if (item != evt.target) {
+        item.setAttribute(attribute, false);
+      }
+    })
+    item.getAttribute(attribute) == "true" ? item.setAttribute(attribute, false) : item.setAttribute(attribute, true);
+  })
+}
+
+submenuToggle.forEach(item => {
+  if (desktopVersion) {
+    item.parentElement.addEventListener("mouseover", (evt) => {
+      item.setAttribute("aria-expanded", true);
+    })
+    item.parentElement.addEventListener("mouseleave", (evt) => {
+      item.setAttribute("aria-expanded", false);
+    })
+    item.addEventListener("focusin", (evt) => {
+      item.setAttribute("aria-expanded", true);
+      submenuToggle.forEach(item => {
+        if (item != evt.target) {
+          item.setAttribute("aria-expanded", false);
+        }
+      })
+    })
+  }
+  else {
+    controlGroupAttributes(submenuToggle, item, "aria-expanded");
+  }
+})
+if (desktopVersion) {
+  productsToggle.forEach((item, index) => {
+    toggleProductsSubmenu("mouseover", item, index);
+    toggleProductsSubmenu("focusin", item, index);
+  })
+};
+function toggleProductsSubmenu(action, item, index) {
+  item.addEventListener(action, (evt) => {
+    productsMenu.forEach(item => {
+      if (item != evt.target) {
+        item.classList.remove("submenu-products--opened");
+      }
+    });
+    productsToggle.forEach(item => {
+      if (item != evt.target) {
+        item.classList.remove("submenu__link--active");
+      }
+    })
+    item.classList.add("submenu__link--active");
+    productsMenu[index].classList.add("submenu-products--opened");
+  })
+}
+typeof Swiper !== 'undefined' && new Swiper(".slider-preview", {
   slidesPerView: 2,
   spaceBetween: 20,
   breakpoints: {
@@ -41,8 +109,8 @@ function initCustomNumber(customNumber) {
     input.value++;
   })
 }
-initCustomNumber(customNumber);
-const similarSlider = new Swiper(".similar__slider", {
+customNumber && initCustomNumber(customNumber);
+typeof Swiper !== 'undefined' && new Swiper(".similar__slider", {
   slidesPerView: 2,
   spaceBetween: 15,
   navigation: {
@@ -55,13 +123,14 @@ const similarSlider = new Swiper(".similar__slider", {
     },
   }
 });
-tabsToggle.forEach(tab => {
-  tab.addEventListener("click", (evt) => {
-    tabsToggle.forEach(tab => {
-      if(tab != evt.target) {
-        tab.setAttribute("aria-selected", false);
-      }
-    })
-    tab.getAttribute("aria-selected") == "true" ? tab.setAttribute("aria-selected", false) : tab.setAttribute("aria-selected", true);
-  })
+typeof Swiper !== 'undefined' && new Swiper(".banner-slider", {
+  slidesPerView: 1,
+  pagination: {
+    el: '.banner-slider__pagination',
+    type: 'bullets',
+  },
+});
+tabsToggle.forEach(item => {
+  controlGroupAttributes(tabsToggle, item, "aria-selected");
 })
+

@@ -1,0 +1,42 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 21px;
+  background-color: @white;
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding-top: 13px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 1160px;
+    margin: 0 auto;
+  }
+}
+
+.main-nav__logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -48px;
+  top: 21px;
+  z-index: 10;
+  @media (min-width: @tablet-width) {
+    margin-top: 23px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 130px;
+    height: 83px;
+  }
+}
+.main-nav__user-menu {
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+

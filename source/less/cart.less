@@ -1,0 +1,39 @@
+.cart {
+  color: @dark-text;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:hover .user-menu__cart-sum,
+    &:focus .user-menu__cart-sum {
+      color: @accent;
+    }
+
+    &:hover,
+    &:focus  {
+      color: @accent;
+    }
+
+    &:active .user-menu__cart-sum {
+      color: inherit;
+    }
+
+    &:active {
+      color: inherit;
+    }
+  }
+}
+
+.cart__sum {
+  display: none;
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 5px;
+    margin-left: 7px;
+    font-size: 13px;
+    color: #000000;
+  }
+}
