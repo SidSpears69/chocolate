@@ -1,7 +1,7 @@
 "use strict";
 const previewSlides = document.querySelectorAll(".slider-preview__slide");
 const productImg = document.querySelector(".product-images__img");
-const customNumber = document.querySelector(".custom-number");
+const quantityPageProduct = document.querySelector(".add-basket__quantity");
 const tabsToggle = document.querySelectorAll(".tabs__toggle");
 const menuToggle = document.querySelector('.menu__toggle')
 const siteList = document.querySelector('.site-list')
@@ -10,8 +10,15 @@ const productsToggle = document.querySelectorAll('.submenu__link--with-products'
 const productsMenu = document.querySelectorAll('.submenu-products');
 const desktopVersion = window.matchMedia("(min-width: 1200px)").matches;
 const search = document.querySelector('.user-menu-search');
-const searchToggle =  search.querySelector('.user-menu-search__btn');
-const searchInput =  search.querySelector('.user-menu-search__input');
+const searchToggle = search.querySelector('.user-menu-search__btn');
+const searchInput = search.querySelector('.user-menu-search__input');
+const basket = document.querySelector(".basket");
+const basketTable = basket.querySelector(".basket__table");
+const productsInBasket = basketTable .querySelectorAll(".table-products__body-row");
+const basketPriceAll = basket.querySelector(".basket__price-all");
+const productsDelete = basketTable .querySelectorAll(".table-products__delete");
+const priceAllforAllProducts = basketTable.querySelectorAll(".table-products__price-all");
+
 menuToggle.addEventListener('click', (evt) => {
   const toggler = evt.target;
   toggler.getAttribute("aria-expanded") == "false" ? toggler.setAttribute("aria-expanded", true) : toggler.setAttribute("aria-expanded", false);
@@ -95,24 +102,8 @@ previewSlides.forEach(slide => {
     productImg.src = slide.querySelector("img").dataset.img;
   })
 })
-const initCustomNumber = (customNumber) => {
-  const buttonLess = customNumber.querySelector(".custom-number__button--less");
-  const buttonMore = customNumber.querySelector(".custom-number__button--more");
-  const input = customNumber.querySelector("input");
-  buttonLess.addEventListener("click", () => {
-    if (input.value > 1) {
-      input.value--;
-      buttonLess.setAttribute("aria-disabled", false);
-    }
-    else {
-      buttonLess.setAttribute("aria-disabled", true);
-    }
-  })
-  buttonMore.addEventListener("click", () => {
-    input.value++;
-  })
-}
-customNumber && initCustomNumber(customNumber);
+
+typeof CustomNumber !== 'undefined' && quantityPageProduct && new CustomNumber(quantityPageProduct);
 typeof Swiper !== 'undefined' && new Swiper(".similar__slider", {
   slidesPerView: 2,
   spaceBetween: 15,
@@ -141,7 +132,7 @@ searchToggle && searchToggle.addEventListener("click", (evt) => {
   button.getAttribute("aria-expanded") == "true" ? button.setAttribute("aria-expanded", false) : button.setAttribute("aria-expanded", true);
   searchInput.classList.toggle("user-menu-search__input--active");
 })
-const modal = new GraphModal({
+typeof GraphModal !== 'undefined' && new GraphModal({
   isOpen: (modal) => {
     modal.previousActiveElement.setAttribute("aria-expanded", true);
   },
@@ -149,3 +140,29 @@ const modal = new GraphModal({
     modal.previousActiveElement.setAttribute("aria-expanded", false);
   }
 });
+const sumPriceProduct = (priceAllforAllProducts) => {
+  const sum = Array.prototype.reduce.call(priceAllforAllProducts, (a, b)=> {
+    return a + parseInt(b.textContent);
+  }, 0)
+  basketPriceAll.textContent = sum;
+}
+productsInBasket.forEach(product => {
+  const priceProduct = product.querySelector(".table-products__price-product").textContent;
+  const priceAll = product.querySelector(".table-products__price-all");
+  new CustomNumber(product.querySelector(".table-products__quantity"), (productsQuantity) => {
+    priceAll.textContent = parseInt(priceProduct) * productsQuantity;
+    sumPriceProduct(priceAllforAllProducts);
+  });
+})
+productsDelete.forEach(item => {
+  item.addEventListener("click", () => {
+    const product = item.closest(".table-products__body-row");
+    product.parentNode.removeChild(product);
+    const newAllforAllProducts = basketTable.querySelectorAll(".table-products__price-all");
+    sumPriceProduct(newAllforAllProducts);
+    if(!newAllforAllProducts.length) {
+      basketTable.parentNode.removeChild(basketTable);
+      basket.textContent = "Нет товаров";
+    }
+  })
+})

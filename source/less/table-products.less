@@ -1,0 +1,111 @@
+.table-products {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
+}
+.table-products__title {
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: @grey-text;
+  text-align: center;
+  padding-bottom: 8px;
+  font-weight: normal;
+  @media(min-width: @tablet-width) {
+    text-align: left;
+  }
+  &--name {
+    @media(min-width: @tablet-width) {
+      padding-left: 12px;
+    }
+  }
+}
+.table-products__body {
+  background-color: @white;
+}
+.table-products__cell{
+  width: auto;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  border-top: 3px solid @grey-stroke;
+  @media(max-width: @mobile-width-only) {
+    display: block;
+    border: none;
+    text-align: center;
+  }
+  @media(min-width: @tablet-width) {
+    &--name {
+      max-width: 40vw;
+    }
+    & .table-products__title {
+      display: none;
+    }
+  }
+  @media(min-width: @desktop-width) {
+    &--name {
+      max-width: none;
+    }
+  }
+  &--price {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    padding-right: 0;
+    @media(min-width: @tablet-width) {
+      padding-right: 27px;
+    }
+  }
+  &--delete {
+    padding-right: 0;
+    color: @grey-text;
+    @media(max-width: @mobile-width-only) {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
+    @media(min-width: @tablet-width) {
+      padding-right: 38px;
+    }
+    @media(min-width: @desktop-width) {
+      &:hover,
+      &:focus {
+        color: @accent;
+      }
+    }
+    & svg {
+      display: block;
+    }
+  }
+}
+.table-products__name {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  @media(min-width: @tablet-width) {
+    padding-left: 12px;
+  }
+}
+.table-products__text {
+  margin: 0;
+  margin-left: 29px;
+  max-width: 345px;
+  font-weight: 600;
+  line-height: 1.37;
+  text-align: left;
+}
+.table-products__header {
+  @media(max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+.table-products__body-row {
+  @media(max-width: @mobile-width-only) {
+    display: flex;
+    background-color: @white;
+    border-top: 3px solid @grey-stroke;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+}
+
