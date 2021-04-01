@@ -141,4 +141,11 @@ searchToggle && searchToggle.addEventListener("click", (evt) => {
   button.getAttribute("aria-expanded") == "true" ? button.setAttribute("aria-expanded", false) : button.setAttribute("aria-expanded", true);
   searchInput.classList.toggle("user-menu-search__input--active");
 })
-
+const modal = new GraphModal({
+  isOpen: (modal) => {
+    modal.previousActiveElement.setAttribute("aria-expanded", true);
+  },
+  isClose: () => {
+    modal.previousActiveElement.setAttribute("aria-expanded", false);
+  }
+});

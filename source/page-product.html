@@ -9,6 +9,7 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="vendors/graph-modal/graph-modal.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Document</title>
 </head>
@@ -26,15 +27,17 @@
         <div class="main-nav__user-menu user-menu">
           <div class="user-menu__item user-menu-search">
             <button class="user-menu-search__btn" aria-controls="search-form" aria-expanded="false">
-              <svg class="search-icon" width="20" height="20" role="img">
+              <svg class="search-icon" width="20" height="20" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#icon-search"></use>
               </svg>
               <span class="visually-hidden">Открыть поиск</span>
             </button>
-            <form method="GET" action="javascript:void(0)" class="user-menu-search__form" id="search-form" role="search">
-              <input type="search" name="search" id="search" placeholder="Поиск" aria-label="Поиск по сайту" class="user-menu-search__input user-menu-search__input--active">
+            <form method="GET" action="javascript:void(0)" class="user-menu-search__form" id="search-form"
+              role="search">
+              <input type="search" name="search" id="search" placeholder="Поиск" aria-label="Поиск по сайту"
+                class="user-menu-search__input user-menu-search__input--active">
               <button type="submit" class="user-menu-search__submit">
-                <svg class="search-icon" width="20" height="20" role="img">
+                <svg class="search-icon" width="20" height="20" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-search"></use>
                 </svg>
                 <span class="visually-hidden">Искать</span>
@@ -44,13 +47,13 @@
           <div class="user-menu__container">
             <a class="user-menu__profile profile" href="#">Войти</a>
             <a class="user-menu__item user-menu__wishlist" href="#">
-              <svg width="22" height="18" role="img" stroke="currentColor" fill="none">
+              <svg width="22" height="18" aria-hidden="true" stroke="currentColor" fill="none">
                 <use xlink:href="img/sprite.svg#icon-favourite-header"></use>
               </svg>
               <span class="visually-hidden">Открыть список избранного</span>
             </a>
             <a class="user-menu__item user-menu__item--cart cart" href="#">
-              <svg width="19" height="24" role="img">
+              <svg width="19" height="24" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#icon-basket"></use>
               </svg>
               <span class="visually-hidden">Cart</span>
@@ -262,7 +265,7 @@
               <li class="product-features__item">Крутое преимущество</li>
             </ul>
             <a href="javascript:void(0);" class="product-features__link">
-              <svg width="16" height="16" role="img">
+              <svg width="16" height="16" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#icon-share"></use>
               </svg>
               Поделиться
@@ -273,31 +276,31 @@
           <div class="product-images__big">
             <img src="img/product-big.jpg" alt="" width="495" height="351" class="product-images__img">
             <button type="button" class="button button--icon product-images__button">
-              <svg width="18" height="16" role="img">
+              <svg width="18" height="16" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#icon-favourite"></use>
               </svg>
               <span class="visually-hidden">Купить товар</span>
             </button>
           </div>
           <div class="product-images__slider slider-preview swiper-container">
-            <ul class="slider-preview__wrapper swiper-wrapper">
-              <li class="slider-preview__slide swiper-slide slider-preview__slide--active">
+            <div class="slider-preview__wrapper swiper-wrapper">
+              <div class="slider-preview__slide swiper-slide slider-preview__slide--active">
                 <img data-img="img/product-big.jpg" src="img/product-small.jpg" alt="" width="96" height="69"
                   class="slider-preview__img">
-              </li>
-              <li class="slider-preview__slide swiper-slide">
+              </div>
+              <div class="slider-preview__slide swiper-slide">
                 <img data-img="img/product-first.jpg" src="img/product-first.jpg" alt="" width="96" height="69"
                   class="slider-preview__img">
-              </li>
-              <li class="slider-preview__slide swiper-slide">
+              </div>
+              <div class="slider-preview__slide swiper-slide">
                 <img data-img="img/product-big.jpg" src="img/product-small.jpg" alt="" width="96" height="69"
                   class="slider-preview__img">
-              </li>
-              <li class="slider-preview__slide swiper-slide">
+              </div>
+              <div class="slider-preview__slide swiper-slide">
                 <img data-img="img/product-big.jpg" src="img/product-small.jpg" alt="" width="96" height="69"
                   class="slider-preview__img">
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -344,27 +347,27 @@
                 <li class="rating__item">
                   <ul class="rating__grade grade">
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
@@ -376,27 +379,27 @@
                 <li class="rating__item">
                   <ul class="rating__grade grade">
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
@@ -408,27 +411,27 @@
                 <li class="rating__item">
                   <ul class="rating__grade grade">
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
@@ -440,27 +443,27 @@
                 <li class="rating__item">
                   <ul class="rating__grade grade">
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
@@ -472,27 +475,27 @@
                 <li class="rating__item">
                   <ul class="rating__grade grade">
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
                     <li class="grade__item">
-                      <svg width="18" height="18" role="img">
+                      <svg width="18" height="18" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#icon-star-empty"></use>
                       </svg>
                     </li>
@@ -503,7 +506,7 @@
                 </li>
               </ul>
               <div class="reviews__diagram diagram">
-                <svg class="diagram__svg" role="img" width="170" height="170" viewBox="0 0 34 34">
+                <svg class="diagram__svg" aria-hidden="true" width="170" height="170" viewBox="0 0 34 34">
                   <circle class="diagram__ring" cx="17" cy="17" r="15.91549430918954" fill="transparent"
                     stroke="#e7e7e7" stroke-width="2"></circle>
                   <circle class="diagram__segment" cx="17" cy="17" r="15.91549430918954" fill="transparent"
@@ -519,7 +522,10 @@
                 <p>
                   Оставьте свой отзыв о товаре:
                 </p>
-                <button type="button" class="button button--color reviews__button">Оставить отзыв</button>
+                <button type="button" class="button button--color reviews__button" data-graph-path="popup"
+                  data-graph-animation="fadeInUp" data-graph-speed="500" aria-controls="popup"
+                  aria-haspopup="true"
+                  aria-expanded="false">Оставить отзыв</button>
               </div>
             </div>
           </div>
@@ -530,67 +536,27 @@
                 <time datetime="2021-09-15" class="review__date">23 сентября, 2021</time>
                 <ul class="review__grade grade">
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                </ul>
-                <span class="visually-hidden">Оценка 5 из 5</span>
-                <p class="review__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
-                  несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
-                  отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали
-                  небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до
-                  десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для
-                  визуально-слухового восприятия.</p>
-              </article>
-            </li>
-            <li class="reviews__item">
-              <article class="review">
-                <h3 class="review__name">Александр</h3>
-                <time datetime="2021-09-15" class="review__date">23 сентября, 2021</time>
-                <ul class="review__grade grade">
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
@@ -610,67 +576,27 @@
                 <time datetime="2021-09-15" class="review__date">23 сентября, 2021</time>
                 <ul class="review__grade grade">
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                </ul>
-                <span class="visually-hidden">Оценка 5 из 5</span>
-                <p class="review__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
-                  несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
-                  отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали
-                  небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до
-                  десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для
-                  визуально-слухового восприятия.</p>
-              </article>
-            </li>
-            <li class="reviews__item">
-              <article class="review">
-                <h3 class="review__name">Александр</h3>
-                <time datetime="2021-09-15" class="review__date">23 сентября, 2021</time>
-                <ul class="review__grade grade">
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
-                      <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                  </li>
-                  <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
@@ -690,27 +616,107 @@
                 <time datetime="2021-09-15" class="review__date">23 сентября, 2021</time>
                 <ul class="review__grade grade">
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
                   <li class="grade__item">
-                    <svg width="18" height="18" role="img">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <span class="visually-hidden">Оценка 5 из 5</span>
+                <p class="review__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                  несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+                  отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали
+                  небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до
+                  десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для
+                  визуально-слухового восприятия.</p>
+              </article>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <h3 class="review__name">Александр</h3>
+                <time datetime="2021-09-15" class="review__date">23 сентября, 2021</time>
+                <ul class="review__grade grade">
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <span class="visually-hidden">Оценка 5 из 5</span>
+                <p class="review__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                  несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+                  отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали
+                  небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до
+                  десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для
+                  визуально-слухового восприятия.</p>
+              </article>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <h3 class="review__name">Александр</h3>
+                <time datetime="2021-09-15" class="review__date">23 сентября, 2021</time>
+                <ul class="review__grade grade">
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="grade__item">
+                    <svg width="18" height="18" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-star"></use>
                     </svg>
                   </li>
@@ -740,7 +746,7 @@
             </li>
             <li class="pagination__item">
               <a href="javascript:void(0);" class="pagination__link">
-                <svg width="8" height="12" role="img">
+                <svg width="8" height="12" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-arrow"></use>
                 </svg>
                 <span class="visually-hidden">Перейти к следующей странице</span>
@@ -756,13 +762,13 @@
         <div class="similar__controls">
           <button type="button" class="button button--icon similar__button similar__button--prev"
             aria-label="Предыдущий слайд">
-            <svg width="8" height="12" role="img">
+            <svg width="8" height="12" aria-hidden="true">
               <use xlink:href="img/sprite.svg#icon-arrow"></use>
             </svg>
           </button>
           <button type="button" class="button button--icon similar__button similar__button--next"
             aria-label="Предыдущий слайд">
-            <svg width="8" height="12" role="img">
+            <svg width="8" height="12" aria-hidden="true">
               <use xlink:href="img/sprite.svg#icon-arrow"></use>
             </svg>
           </button>
@@ -781,13 +787,13 @@
                 </a>
                 <div class="product-card__buttons-block">
                   <button type="button" class="button button--icon product-card__button">
-                    <svg width="18" height="16" role="img">
+                    <svg width="18" height="16" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-favourite"></use>
                     </svg>
                     <span class="visually-hidden">Добавить в избранное</span>
                   </button>
                   <button type="button" class="button button--icon product-card__button">
-                    <svg width="16" height="19" role="img">
+                    <svg width="16" height="19" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-basket"></use>
                     </svg>
                     <span class="visually-hidden">Купить товар</span>
@@ -807,13 +813,13 @@
                 </a>
                 <div class="product-card__buttons-block">
                   <button type="button" class="button button--icon product-card__button">
-                    <svg width="18" height="16" role="img">
+                    <svg width="18" height="16" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-favourite"></use>
                     </svg>
                     <span class="visually-hidden">Добавить в избранное</span>
                   </button>
                   <button type="button" class="button button--icon product-card__button">
-                    <svg width="16" height="19" role="img">
+                    <svg width="16" height="19" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-basket"></use>
                     </svg>
                     <span class="visually-hidden">Купить товар</span>
@@ -833,13 +839,13 @@
                 </a>
                 <div class="product-card__buttons-block">
                   <button type="button" class="button button--icon product-card__button">
-                    <svg width="18" height="16" role="img">
+                    <svg width="18" height="16" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-favourite"></use>
                     </svg>
                     <span class="visually-hidden">Добавить в избранное</span>
                   </button>
                   <button type="button" class="button button--icon product-card__button">
-                    <svg width="16" height="19" role="img">
+                    <svg width="16" height="19" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#icon-basket"></use>
                     </svg>
                     <span class="visually-hidden">Купить товар</span>
@@ -851,6 +857,61 @@
         </div>
       </section>
     </div>
+    <section class="modal">
+      <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="popup" id="popup" aria-labelledby="popup-title">
+        <button class="modal__close" aria-label="Закрыть модальное окно">
+          <svg width="20" height="20" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="modal-content">
+          <h2 class="modal__title" id="popup-title">Напишите свой отзыв</h2>
+          <p class="modal__text">Ваш отзыв поможет кому-то сделать выбор. Спасибо, что делитесь опытом!</p>
+          <form action="javascript:void(0);" method="POST" class="modal__form review-form">
+            <div class="review-form__item">
+              <p class="review-form__text">Ваша оценка:</p>
+              <div class="review-form__grade review-grade">
+                <input type="radio" name="rating" id="rating-5" value="5" class="visually-hidden review-grade__input">
+                <label for="rating-5" class="review-grade__label">
+                  <span class="visually-hidden">5 из 5</span>
+                </label>
+                <input type="radio" name="rating" id="rating-4" value="4" class="visually-hidden review-grade__input">
+                <label for="rating-4" class="review-grade__label">
+                  <span class="visually-hidden">4 из 5</span>
+                </label>
+                <input type="radio" name="rating" id="rating-3" value="3" class="visually-hidden review-grade__input">
+                <label for="rating-3" class="review-grade__label">
+                  <span class="visually-hidden">3 из 5</span>
+                </label>
+                <input type="radio" name="rating" id="rating-2" value="2" class="visually-hidden review-grade__input">
+                <label for="rating-2" class="review-grade__label">
+                  <span class="visually-hidden">2 из 5</span>
+                </label>
+                <input type="radio" name="rating" id="rating-1" value="1" class="visually-hidden review-grade__input">
+                <label for="rating-1" class="review-grade__label">
+                  <span class="visually-hidden">1 из 5</span>
+                </label>
+              </div>
+            </div>
+            <div class="review-form__item">
+              <label class="review-form__label">
+                Ваше имя <span class="review-form__required">*</span>
+                <input type="text" name="your-name" class="review-form__input" required>
+              </label>
+              <label class="review-form__label">
+                Ваш e-mail <span class="review-form__required">*</span>
+                <input type="email" name="your-email" class="review-form__input" required>
+              </label>
+            </div>
+            <label class="review-form__label review-form__label--textarea">
+              Отзыв <span class="review-form__required">*</span>
+              <textarea name="your-review" class="review-form__input review-form__input--textarea" required></textarea>
+            </label>
+            <button type="submit" class="button button--color review-form__button">Оставить отзыв</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__container">
@@ -860,19 +921,19 @@
           <div class="social-network__group-wrapper">
             <div class="social-network__group">
               <a class="social-network__btn social-network__btn--twitter" href="#">
-                <svg class="social-network__img social-network__img--vk" width="20" height="11" role="img">
+                <svg class="social-network__img social-network__img--vk" width="20" height="11" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
                 <span class="visually-hidden">Вконтакте</span>
               </a>
               <a class="social-network__btn social-network__btn--fb" href="#">
-                <svg class="social-network__img social-network__img--fb" width="9" height="17" role="img">
+                <svg class="social-network__img social-network__img--fb" width="9" height="17" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
                 <span class="visually-hidden">Facebook</span>
               </a>
               <a class="social-network__btn social-network__btn--inst" href="#">
-                <svg class="social-network__img social-network__img--inst" width="18" height="18" role="img">
+                <svg class="social-network__img social-network__img--inst" width="18" height="18" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-inst"></use>
                 </svg>
                 <span class="visually-hidden">Instagram</span>
@@ -891,7 +952,7 @@
         <div class="footer-contacts__container">
           <h3 class="footer-contacts__title">Контакты</h3>
           <a href="tel:84952781140" class="footer-contacts__link footer-contacts__link--tel">
-            <svg class="footer-contacts__img" width="18" height="18" role="img">
+            <svg class="footer-contacts__img" width="18" height="18" aria-hidden="true">
               <use xlink:href="img/sprite.svg#icon-dispatcher"></use>
             </svg>
             8 (495) 278-11-40</a>
@@ -944,10 +1005,10 @@
       </div>
       <div class="page-footer__payment footer-payment">
         <span class="footer-payment__item">Принимаем к оплате:</span>
-        <svg class="footer-payment__item" width="34" height="24" aria-label="Карты Visa" role="img">
+        <svg class="footer-payment__item" width="34" height="24" aria-label="Карты Visa" aria-hidden="true">
           <use xlink:href="img/sprite.svg#icon-visa"></use>
         </svg>
-        <svg class="footer-payment__item" width="37" height="23" aria-label="Карты Master Card" role="img">
+        <svg class="footer-payment__item" width="37" height="23" aria-label="Карты Master Card" aria-hidden="true">
           <use xlink:href="img/sprite.svg#icon-master-card"></use>
         </svg>
       </div>
@@ -959,11 +1020,11 @@
       </div>
       <div class="page-footer__copyright footer-copyright">
         <a class="footer-copyright__link" href="#">
-          <svg width="8" height="12" role="img">
+          <svg width="8" height="12" aria-hidden="true">
             <use xlink:href="img/sprite.svg#icon-arrow"></use>
           </svg>
           Перейти на информационный сайт
-          <svg width="8" height="12" style="transform: rotate(180deg);" role="img">
+          <svg width="8" height="12" style="transform: rotate(180deg);" aria-hidden="true">
             <use xlink:href="img/sprite.svg#icon-arrow"></use>
           </svg>
         </a>
@@ -971,6 +1032,7 @@
     </div>
   </footer>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="vendors/graph-modal/graph-modal.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 
