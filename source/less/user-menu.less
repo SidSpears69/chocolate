@@ -89,6 +89,10 @@
     &:hover,
     &:focus {
       color: @accent;
+      & svg {
+        fill: @accent;
+        stroke: @accent;
+      }
     }
 
     &:active {
@@ -100,5 +104,11 @@
   display: none;
   @media (min-width: @tablet-width) {
     display: block;
+  }
+  @media (min-width: @desktop-width) {
+    &:hover,
+    &:focus {
+      color: @accent;
+    }
   }
 }

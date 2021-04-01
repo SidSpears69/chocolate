@@ -25,23 +25,32 @@
         </a>
         <div class="main-nav__user-menu user-menu">
           <div class="user-menu__item user-menu-search">
-            <button class="user-menu-search__btn">
-              <svg class="search-icon" height="20" width="20">
+            <button class="user-menu-search__btn" aria-controls="search-form" aria-expanded="false">
+              <svg class="search-icon" width="20" height="20" role="img">
                 <use xlink:href="img/sprite.svg#icon-search"></use>
               </svg>
-              <span class="visually-hidden">Поиск по сайту</span>
+              <span class="visually-hidden">Открыть поиск</span>
             </button>
+            <form method="GET" action="javascript:void(0)" class="user-menu-search__form" id="search-form" role="search">
+              <input type="search" name="search" id="search" placeholder="Поиск" aria-label="Поиск по сайту" class="user-menu-search__input user-menu-search__input--active">
+              <button type="submit" class="user-menu-search__submit">
+                <svg class="search-icon" width="20" height="20" role="img">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+                <span class="visually-hidden">Искать</span>
+              </button>
+            </form>
           </div>
           <div class="user-menu__container">
             <a class="user-menu__profile profile" href="#">Войти</a>
             <a class="user-menu__item user-menu__wishlist" href="#">
-              <svg height="18" width="22">
-                <use xlink:href="img/sprite.svg#icon-favourites"></use>
+              <svg width="22" height="18" role="img" stroke="currentColor" fill="none">
+                <use xlink:href="img/sprite.svg#icon-favourite-header"></use>
               </svg>
               <span class="visually-hidden">Открыть список избранного</span>
             </a>
             <a class="user-menu__item user-menu__item--cart cart" href="#">
-              <svg height="24" width="19">
+              <svg width="19" height="24" role="img">
                 <use xlink:href="img/sprite.svg#icon-basket"></use>
               </svg>
               <span class="visually-hidden">Cart</span>
@@ -80,7 +89,7 @@
                     </li>
                   </ul>
                 </div>
-                <ul class="submenu__products submenu-products submenu-products--opened" id="fiat">
+                <ul class="submenu__products submenu-products submenu-products--opened">
                   <li class="submenu-products__item">
                     <article class="submenu-product-card">
                       <a class="submenu-product-card__link" href="javascript:void(0);">
@@ -130,7 +139,7 @@
                     </article>
                   </li>
                 </ul>
-                <ul class="submenu__products submenu-products" id="scorza">
+                <ul class="submenu__products submenu-products">
                   <li class="submenu-products__item">
                     <article class="submenu-product-card">
                       <a class="submenu-product-card__link" href="javascript:void(0);">
@@ -173,7 +182,7 @@
             <li class="menu__item">
               <a class="menu__link menu__link--with-submenu" href="#" aria-controls="submenu-2"
                 aria-expanded="false">Шоколад по вкусу</a>
-              <div class="menu__submenu submenu" id="submenu-1">
+              <div class="menu__submenu submenu" id="submenu-2">
                 Привет мир
               </div>
             </li>
@@ -192,8 +201,8 @@
     <section>
       <h1 class="visually-hidden">Саровский Шоколад - только натуральный шоколад!</h1>
       <div class="banner-slider swiper-container">
-        <ul class="banner-slider__wrapper swiper-wrapper">
-          <li class="banner-slider__slide swiper-slide">
+        <div class="banner-slider__wrapper swiper-wrapper">
+          <div class="banner-slider__slide swiper-slide">
             <div class="banner">
               <img src="img/background-desktop.jpg" alt="" width="1920" height="963" class="banner__img">
               <div class="banner__container">
@@ -202,8 +211,8 @@
                 <span class="banner__text-3">не менее 52 %</span>
               </div>
             </div>
-          </li>
-          <li class="banner-slider__slide swiper-slide">
+          </div>
+          <div class="banner-slider__slide swiper-slide">
             <div class="banner">
               <img src="img/background-desktop.jpg" alt="" width="1920" height="963" class="banner__img">
               <div class="banner__container">
@@ -212,8 +221,8 @@
                 <span class="banner__text-3">не менее 52 %</span>
               </div>
             </div>
-          </li>
-          <li class="banner-slider__slide swiper-slide">
+          </div>
+          <div class="banner-slider__slide swiper-slide">
             <div class="banner">
               <img src="img/background-desktop.jpg" alt="" width="1920" height="963" class="banner__img">
               <div class="banner__container">
@@ -222,8 +231,8 @@
                 <span class="banner__text-3">не менее 52 %</span>
               </div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
         <div class="banner-slider__pagination swiper-pagination"></div>
       </div>
     </section>
@@ -612,19 +621,19 @@
           <div class="social-network__group-wrapper">
             <div class="social-network__group">
               <a class="social-network__btn social-network__btn--twitter" href="#">
-                <svg class="social-network__img social-network__img--vk" height="11" width="20">
+                <svg class="social-network__img social-network__img--vk" width="20" height="11" role="img">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
                 <span class="visually-hidden">Вконтакте</span>
               </a>
               <a class="social-network__btn social-network__btn--fb" href="#">
-                <svg class="social-network__img social-network__img--fb" height="17" width="9">
+                <svg class="social-network__img social-network__img--fb" width="9" height="17" role="img">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
                 <span class="visually-hidden">Facebook</span>
               </a>
               <a class="social-network__btn social-network__btn--inst" href="#">
-                <svg class="social-network__img social-network__img--inst" height="18" width="18">
+                <svg class="social-network__img social-network__img--inst" width="18" height="18" role="img">
                   <use xlink:href="img/sprite.svg#icon-inst"></use>
                 </svg>
                 <span class="visually-hidden">Instagram</span>
@@ -642,12 +651,12 @@
       <div class="page-footer__contacts footer-contacts">
         <div class="footer-contacts__container">
           <h3 class="footer-contacts__title">Контакты</h3>
-          <a href="tel: 84952781140" class="footer-contacts__link footer-contacts__link--tel">
-            <svg class="footer-contacts__img" height="18" width="18">
+          <a href="tel:84952781140" class="footer-contacts__link footer-contacts__link--tel">
+            <svg class="footer-contacts__img" width="18" height="18" role="img">
               <use xlink:href="img/sprite.svg#icon-dispatcher"></use>
             </svg>
             8 (495) 278-11-40</a>
-          <a href="mailto: sarovshocolate@yandex.ru"
+          <a href="mailto:sarovshocolate@yandex.ru"
             class="footer-contacts__link footer-contacts__link--email">sarovshocolate@yandex.ru</a>
         </div>
       </div>
@@ -696,10 +705,10 @@
       </div>
       <div class="page-footer__payment footer-payment">
         <span class="footer-payment__item">Принимаем к оплате:</span>
-        <svg class="footer-payment__item" height="24" width="34">
+        <svg class="footer-payment__item" width="34" height="24" aria-label="Карты Visa" role="img">
           <use xlink:href="img/sprite.svg#icon-visa"></use>
         </svg>
-        <svg class="footer-payment__item" height="23" width="37">
+        <svg class="footer-payment__item" width="37" height="23" aria-label="Карты Master Card" role="img">
           <use xlink:href="img/sprite.svg#icon-master-card"></use>
         </svg>
       </div>
@@ -711,11 +720,11 @@
       </div>
       <div class="page-footer__copyright footer-copyright">
         <a class="footer-copyright__link" href="#">
-          <svg height="12" width="8">
+          <svg width="8" height="12" role="img">
             <use xlink:href="img/sprite.svg#icon-arrow"></use>
           </svg>
           Перейти на информационный сайт
-          <svg height="12" style="transform: rotate(180deg);" width="8">
+          <svg width="8" height="12" style="transform: rotate(180deg);" role="img">
             <use xlink:href="img/sprite.svg#icon-arrow"></use>
           </svg>
         </a>

@@ -9,7 +9,9 @@ const submenuToggle = document.querySelectorAll('.menu__link--with-submenu');
 const productsToggle = document.querySelectorAll('.submenu__link--with-products');
 const productsMenu = document.querySelectorAll('.submenu-products');
 const desktopVersion = window.matchMedia("(min-width: 1200px)").matches;
-
+const search = document.querySelector('.user-menu-search');
+const searchToggle =  search.querySelector('.user-menu-search__btn');
+const searchInput =  search.querySelector('.user-menu-search__input');
 menuToggle.addEventListener('click', (evt) => {
   const toggler = evt.target;
   toggler.getAttribute("aria-expanded") == "false" ? toggler.setAttribute("aria-expanded", true) : toggler.setAttribute("aria-expanded", false);
@@ -17,7 +19,7 @@ menuToggle.addEventListener('click', (evt) => {
     item.setAttribute("aria-expanded", false);
   })
 })
-function controlGroupAttributes(elements, item, attribute) {
+const controlGroupAttributes = (elements, item, attribute) => {
   item.addEventListener("click", (evt) => {
     elements.forEach(item => {
       if (item != evt.target) {
@@ -49,13 +51,7 @@ submenuToggle.forEach(item => {
     controlGroupAttributes(submenuToggle, item, "aria-expanded");
   }
 })
-if (desktopVersion) {
-  productsToggle.forEach((item, index) => {
-    toggleProductsSubmenu("mouseover", item, index);
-    toggleProductsSubmenu("focusin", item, index);
-  })
-};
-function toggleProductsSubmenu(action, item, index) {
+const toggleProductsSubmenu = (action, item, index) => {
   item.addEventListener(action, (evt) => {
     productsMenu.forEach(item => {
       if (item != evt.target) {
@@ -71,6 +67,13 @@ function toggleProductsSubmenu(action, item, index) {
     productsMenu[index].classList.add("submenu-products--opened");
   })
 }
+if (desktopVersion) {
+  productsToggle.forEach((item, index) => {
+    toggleProductsSubmenu("mouseover", item, index);
+    toggleProductsSubmenu("focusin", item, index);
+  })
+};
+
 typeof Swiper !== 'undefined' && new Swiper(".slider-preview", {
   slidesPerView: 2,
   spaceBetween: 20,
@@ -92,7 +95,7 @@ previewSlides.forEach(slide => {
     productImg.src = slide.querySelector("img").dataset.img;
   })
 })
-function initCustomNumber(customNumber) {
+const initCustomNumber = (customNumber) => {
   const buttonLess = customNumber.querySelector(".custom-number__button--less");
   const buttonMore = customNumber.querySelector(".custom-number__button--more");
   const input = customNumber.querySelector("input");
@@ -132,5 +135,10 @@ typeof Swiper !== 'undefined' && new Swiper(".banner-slider", {
 });
 tabsToggle.forEach(item => {
   controlGroupAttributes(tabsToggle, item, "aria-selected");
+})
+searchToggle && searchToggle.addEventListener("click", (evt) => {
+  const button = evt.currentTarget;
+  button.getAttribute("aria-expanded") == "true" ? button.setAttribute("aria-expanded", false) : button.setAttribute("aria-expanded", true);
+  searchInput.classList.toggle("user-menu-search__input--active");
 })
 
