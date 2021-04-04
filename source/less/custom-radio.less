@@ -1,0 +1,34 @@
+.custom-radio {
+  display: flex;
+  align-items: center;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.custom-radio__status {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  position: relative;
+  margin-right: 12px;
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    left:50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+  }
+}
+.custom-radio__input:checked + .custom-radio__status {
+  border-color: @accent;
+  &::before {
+    background-color: @accent;
+  }
+}

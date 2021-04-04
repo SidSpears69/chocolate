@@ -1,0 +1,40 @@
+.orders {
+  background-color: @white;
+  font-size: 14px;
+}
+.orders__info {
+  padding: 30px;
+  padding-top: 0;
+  padding-bottom: 35px;
+  border-bottom: 1px solid @grey-stroke;
+
+}
+.orders__name-order {
+  padding-right: 9px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid @grey-stroke;
+  display: flex;
+  margin-bottom: 11px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.orders__text {
+  margin: 0;
+  width: 66%;
+}
+.orders__price {
+  margin: 0;
+  font-weight: 600;
+  color: @black;
+  margin-left: auto;
+  flex-shrink: 0;
+  &--total {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+.orders__radio {
+  margin-bottom: 10px;
+}

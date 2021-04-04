@@ -1,0 +1,39 @@
+.order-registration {
+  display: flex;
+  border-top: 3px solid @grey-stroke;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+.order-registration__contacts {
+  border: none;
+  width: 100%;
+  margin-bottom: 30px;
+  @media (min-width: @tablet-width) {
+    width: 51%;
+    margin-bottom: 0;
+  }
+}
+.order-registration__orders {
+  width: 100%;
+  @media (min-width: @tablet-width) {
+    width: 41%;
+  }
+}
+.order-registration__title {
+  margin-top: 27px;
+  margin-bottom: 13px;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: @grey-text;
+  font-weight: normal;
+  &--total {
+    margin: 0;
+    font-weight: 600;
+    color: @dark-text;
+  }
+}

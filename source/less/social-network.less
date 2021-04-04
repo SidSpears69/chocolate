@@ -72,7 +72,7 @@
 
 .social-network__btn {
   position: relative;
-  display: block;
+  display: flex;
   width: 34px;
   height: 34px;
   margin-left: 6px;
@@ -80,6 +80,8 @@
   border-radius: 50%;
   background-color: #ffffff;
   color: inherit;
+  justify-content: center;
+  align-items: center;
   @media (min-width: @desktop-width) {
 
     &:hover,
@@ -93,27 +95,6 @@
     margin-right: 0;
   }
 
-}
-
-.social-network__img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  &--vk {
-    margin-top: -5px;
-    margin-left: -10px;
-  }
-
-  &--fb {
-    margin-top: -8px;
-    margin-left: -4px;
-  }
-
-  &--inst {
-    margin-top: -9px;
-    margin-left: -9px;
-  }
 }
 
 .social-network__description {

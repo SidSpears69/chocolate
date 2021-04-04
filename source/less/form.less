@@ -1,0 +1,80 @@
+.form {
+  font-size: 15px;
+  line-height: 1.47;
+}
+.form__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form__text {
+  margin: 0;
+  margin-right: 18px;
+  width: 100%;
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
+}
+.form__grade {
+  margin-right: auto;
+  margin-top: 10px;
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+.form__label {
+  width: 100%;
+  display: block;
+  @media (min-width: @tablet-width) {
+    width: 48%;
+  }
+  &--full-width {
+    width: 100%;
+    margin-bottom: 18px;
+    margin-top: 9px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &--small-width {
+    width: 48%;
+    @media (min-width: @tablet-width) {
+      width: 23%;
+    }
+  }
+}
+.form__input {
+  width: 100%;
+  border: 1px solid @grey-stroke;
+  color: inherit;
+  font: inherit;
+  padding: 11px 19px;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  &--textarea {
+    height: 135px;
+    resize: none;
+  }
+  &--select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    padding-right: 29px;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5.5 6L10 1' stroke='%23382F2D' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+    background-position: calc(100% - 20px) center;
+    background-repeat: no-repeat;
+  }
+}
+.form__required {
+  color: #D25C5C;
+}
+.form__button {
+  margin-top: 26px;
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
+}

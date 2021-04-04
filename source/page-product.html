@@ -867,10 +867,10 @@
         <div class="modal-content">
           <h2 class="modal__title" id="popup-title">Напишите свой отзыв</h2>
           <p class="modal__text">Ваш отзыв поможет кому-то сделать выбор. Спасибо, что делитесь опытом!</p>
-          <form action="javascript:void(0);" method="POST" class="modal__form review-form">
-            <div class="review-form__item">
-              <p class="review-form__text">Ваша оценка:</p>
-              <div class="review-form__grade review-grade">
+          <form action="javascript:void(0);" method="POST" class="modal__form form">
+            <div class="form__item">
+              <p class="form__text">Ваша оценка:</p>
+              <div class="form__grade review-grade">
                 <input type="radio" name="rating" id="rating-5" value="5" class="visually-hidden review-grade__input">
                 <label for="rating-5" class="review-grade__label">
                   <span class="visually-hidden">5 из 5</span>
@@ -893,21 +893,21 @@
                 </label>
               </div>
             </div>
-            <div class="review-form__item">
-              <label class="review-form__label">
-                Ваше имя <span class="review-form__required">*</span>
-                <input type="text" name="your-name" class="review-form__input" required>
+            <div class="form__item">
+              <label class="form__label">
+                Ваше имя <span class="form__required">*</span>
+                <input type="text" name="your-name" class="form__input" required>
               </label>
-              <label class="review-form__label">
-                Ваш e-mail <span class="review-form__required">*</span>
-                <input type="email" name="your-email" class="review-form__input" required>
+              <label class="form__label">
+                Ваш e-mail <span class="form__required">*</span>
+                <input type="email" name="your-email" class="form__input" required>
               </label>
             </div>
-            <label class="review-form__label review-form__label--textarea">
-              Отзыв <span class="review-form__required">*</span>
-              <textarea name="your-review" class="review-form__input review-form__input--textarea" required></textarea>
+            <label class="form__label form__label--full-width">
+              Отзыв <span class="form__required">*</span>
+              <textarea name="your-review" class="form__input form__input--textarea" required></textarea>
             </label>
-            <button type="submit" class="button button--color review-form__button">Оставить отзыв</button>
+            <button type="submit" class="button button--color form__button">Оставить отзыв</button>
           </form>
         </div>
       </div>
@@ -920,20 +920,20 @@
           <h3 class="social-network__title">Наши соцсети</h3>
           <div class="social-network__group-wrapper">
             <div class="social-network__group">
-              <a class="social-network__btn social-network__btn--twitter" href="#">
-                <svg class="social-network__img social-network__img--vk" width="20" height="11" aria-hidden="true">
+              <a class="social-network__btn" href="#">
+                <svg width="20" height="11" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
                 <span class="visually-hidden">Вконтакте</span>
               </a>
-              <a class="social-network__btn social-network__btn--fb" href="#">
-                <svg class="social-network__img social-network__img--fb" width="9" height="17" aria-hidden="true">
+              <a class="social-network__btn" href="#">
+                <svg width="9" height="17" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
                 <span class="visually-hidden">Facebook</span>
               </a>
-              <a class="social-network__btn social-network__btn--inst" href="#">
-                <svg class="social-network__img social-network__img--inst" width="18" height="18" aria-hidden="true">
+              <a class="social-network__btn" href="#">
+                <svg width="18" height="18" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#icon-inst"></use>
                 </svg>
                 <span class="visually-hidden">Instagram</span>
@@ -1005,12 +1005,8 @@
       </div>
       <div class="page-footer__payment footer-payment">
         <span class="footer-payment__item">Принимаем к оплате:</span>
-        <svg class="footer-payment__item" width="34" height="24" aria-label="Карты Visa" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#icon-visa"></use>
-        </svg>
-        <svg class="footer-payment__item" width="37" height="23" aria-label="Карты Master Card" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#icon-master-card"></use>
-        </svg>
+        <img class="footer-payment__item" src="img/icon-visa.svg" alt="Карты Visa" width="34" height="24">
+        <img class="footer-payment__item" src="img/icon-master-card.svg" alt="Карты Master Card" width="37" height="23">
       </div>
       <div class="footer-description">
         <h3 class="footer-description__title">Саровский Шоколад ®</h3>
