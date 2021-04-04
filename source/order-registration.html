@@ -9,6 +9,7 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="vendors/graph-modal/graph-modal.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Document</title>
 </head>
@@ -220,7 +221,7 @@
             </label>
             <label class="form__label form__label--full-width">
               Телефон <span class="form__required">*</span>
-              <input type="tel" name="order-tel" class="form__input">
+              <input type="tel" name="order-tel" class="form__input" required>
             </label>
             <label class="form__label form__label--full-width">
               E-mail
@@ -229,6 +230,7 @@
             <label class="form__label form__label--full-width">
               Страна <span class="form__required">*</span>
               <select name="order-country" class="form__input form__input--select" required>
+                <option value = "">Выберите страну</option>
                 <option value="Россия">Россия</option>
               </select>
             </label>
@@ -256,7 +258,7 @@
             </div>
             <label class="form__label form__label--full-width">
               Комментарий к заказу
-              <textarea name="orders-comment" class="form__input form__input--textarea" required></textarea>
+              <textarea name="orders-comment" class="form__input form__input--textarea"></textarea>
             </label>
           </fieldset>
           <div class="order-registration__orders orders">
@@ -322,6 +324,21 @@
         </form>
       </section>
     </div>
+    <section class="modal">
+      <div class="modal__container modal__container--thanks" role="dialog" aria-modal="true" data-graph-target="popup-order" id="popup-order" aria-labelledby="popup-title">
+        <button class="modal__close" aria-label="Закрыть модальное окно">
+          <svg width="20" height="20" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="modal-content modal-content--thanks">
+          <h2 class="modal__title" id="popup-title">Спасибо! Ваш заказ принят!</h2>
+          <img src="img/icon-thanks.svg" alt="" width="46" height="51" class="modal__img" aria-hidden="true">
+          <p class="modal__text modal__text--thanks">Ваш заказ принят и находится в обработке. Наш менеджер перезвонит Вам в кратчайшие сроки. Обычно это занимает 5-10 минут.</p>
+          <button type="submit" class="button button--color modal__button">Понятно</button>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__container">
@@ -439,6 +456,7 @@
   </footer>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="vendors/custom-number.js/custom-number.js"></script>
+  <script src="vendors/graph-modal/graph-modal.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

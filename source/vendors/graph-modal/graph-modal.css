@@ -58,7 +58,7 @@ html {
 
 @media (max-width:1024px) {
   .modal__container {
-    width: 90%
+    max-width: 90%;
   }
 }
 

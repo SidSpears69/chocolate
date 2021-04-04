@@ -12,7 +12,8 @@ const desktopVersion = window.matchMedia("(min-width: 1200px)").matches;
 const search = document.querySelector('.user-menu-search');
 const searchToggle = search.querySelector('.user-menu-search__btn');
 const searchInput = search.querySelector('.user-menu-search__input');
-
+const ordersForm = document.querySelector(".order-registration");
+const ordersPopupClose = document.querySelector(".modal__button");
 menuToggle.addEventListener('click', (evt) => {
   const toggler = evt.target;
   toggler.getAttribute("aria-expanded") == "false" ? toggler.setAttribute("aria-expanded", true) : toggler.setAttribute("aria-expanded", false);
@@ -134,4 +135,13 @@ typeof GraphModal !== 'undefined' && new GraphModal({
     modal.previousActiveElement.setAttribute("aria-expanded", false);
   }
 });
+const popupOrder = document.querySelector("#popup-order");
+ordersForm && ordersForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  const modal = new GraphModal();
+  modal.open('popup-order');
+  ordersPopupClose.addEventListener("click", () => {
+    modal.close('popup-order');
+  })
+})
 
