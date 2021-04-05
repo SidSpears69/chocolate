@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="vendors/graph-modal/graph-modal.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <nav class="page-header__main-nav main-nav">
+        <a class="main-nav__logo logo" href="#">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.png">
+            <img alt="Sarov chocolate" class="logo__img" src="img/logo-mobile.png">
+          </picture>
+        </a>
+        <div class="main-nav__user-menu user-menu">
+          <div class="user-menu__item user-menu-search">
+            <button class="user-menu-search__btn" aria-haspopup="true" aria-controls="search-form"
+              aria-expanded="false">
+              <svg class="search-icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="visually-hidden">Открыть поиск</span>
+            </button>
+            <form method="GET" action="javascript:void(0)" class="user-menu-search__form" id="search-form"
+              role="search">
+              <input type="search" name="search" id="search" placeholder="Поиск" aria-label="Поиск по сайту"
+                class="user-menu-search__input user-menu-search__input--active">
+              <button type="submit" class="user-menu-search__submit">
+                <svg class="search-icon" width="20" height="20" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+                <span class="visually-hidden">Искать</span>
+              </button>
+            </form>
+          </div>
+          <div class="user-menu__container">
+            <a class="user-menu__profile profile" href="#">Войти</a>
+            <a class="user-menu__item user-menu__wishlist" href="#">
+              <svg width="22" height="18" aria-hidden="true" stroke="currentColor" fill="none">
+                <use xlink:href="img/sprite.svg#icon-favourite-header"></use>
+              </svg>
+              <span class="visually-hidden">Открыть список избранного</span>
+            </a>
+            <a class="user-menu__item user-menu__item--cart cart" href="#">
+              <svg width="19" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-basket"></use>
+              </svg>
+              <span class="visually-hidden">Cart</span>
+              <span class="cart__sum">0,00 &#8381;</span>
+            </a>
+          </div>
+        </div>
+        <div class="main-nav__menu menu">
+          <a class="menu__profile profile" href="#">Войти</a>
+          <button class="menu__toggle" type="button" aria-haspopup="true" aria-controls="site-list"
+            aria-expanded="false">Меню</button>
+          <ul class="menu__items" id="site-list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Идеи для подарков</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--with-submenu" href="#" aria-haspopup="true" aria-controls="submenu-1"
+                aria-expanded="false">Линейка продукции</a>
+              <div class="menu__submenu submenu" id="submenu-1">
+                <div class="submenu__menu-items">
+                  <h3 class="submenu__title">Линейка продукции</h3>
+                  <ul class="submenu__wrapper">
+                    <li class="submenu__item">
+                      <a class="submenu__link submenu__link--with-products" href="">Fiat</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a class="submenu__link submenu__link--with-products" href="">Cioccolata Scorza</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a class="submenu__link" href=""> Tortellini</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a class="submenu__link" href="">Snap</a>
+                    </li>
+                    <li class="submenu__item submenu__item--all">
+                      <a class="submenu__link submenu__link--all" href="">Смотреть всё</a>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="submenu__products submenu-products submenu-products--opened">
+                  <li class="submenu-products__item">
+                    <article class="submenu-product-card">
+                      <a class="submenu-product-card__link" href="javascript:void(0);">
+                        <h3 class="submenu-product-card__title">Чернослив в шоколаде "Русь Православная" Саров</h3>
+                        <div class="submenu-product-card__img-wrapper">
+                          <img alt="Коробка конфет" class="submenu-product-card__img" height="111"
+                            src="img/product-second.jpg" width="153">
+                        </div>
+                        <p class="submenu-product-card__price">340 ₽</p>
+                      </a>
+                    </article>
+                  </li>
+                  <li class="submenu-products__item">
+                    <article class="submenu-product-card">
+                      <a class="submenu-product-card__link" href="javascript:void(0);">
+                        <h3 class="submenu-product-card__title">Чернослив в шоколаде "Русь Православная" Саров</h3>
+                        <div class="submenu-product-card__img-wrapper">
+                          <img alt="Коробка конфет" class="submenu-product-card__img" height="111"
+                            src="img/product-second.jpg" width="153">
+                        </div>
+                        <p class="submenu-product-card__price">340 ₽</p>
+                      </a>
+                    </article>
+                  </li>
+                  <li class="submenu-products__item">
+                    <article class="submenu-product-card">
+                      <a class="submenu-product-card__link" href="javascript:void(0);">
+                        <h3 class="submenu-product-card__title">Чернослив в шоколаде "Русь Православная" Саров</h3>
+                        <div class="submenu-product-card__img-wrapper">
+                          <img alt="Коробка конфет" class="submenu-product-card__img" height="111"
+                            src="img/product-second.jpg" width="153">
+                        </div>
+                        <p class="submenu-product-card__price">340 ₽</p>
+                      </a>
+                    </article>
+                  </li>
+                  <li class="submenu-products__item">
+                    <article class="submenu-product-card">
+                      <a class="submenu-product-card__link" href="javascript:void(0);">
+                        <h3 class="submenu-product-card__title">Чернослив в шоколаде "Русь Православная" Саров</h3>
+                        <div class="submenu-product-card__img-wrapper">
+                          <img alt="Коробка конфет" class="submenu-product-card__img" height="111"
+                            src="img/product-second.jpg" width="153">
+                        </div>
+                        <p class="submenu-product-card__price">340 ₽</p>
+                      </a>
+                    </article>
+                  </li>
+                </ul>
+                <ul class="submenu__products submenu-products">
+                  <li class="submenu-products__item">
+                    <article class="submenu-product-card">
+                      <a class="submenu-product-card__link" href="javascript:void(0);">
+                        <h3 class="submenu-product-card__title">Чернослив в шоколаде "Русь Православная" Саров</h3>
+                        <div class="submenu-product-card__img-wrapper">
+                          <img alt="Коробка конфет" class="submenu-product-card__img" height="111"
+                            src="img/product-second.jpg" width="153">
+                        </div>
+                        <p class="submenu-product-card__price">340 ₽</p>
+                      </a>
+                    </article>
+                  </li>
+                  <li class="submenu-products__item">
+                    <article class="submenu-product-card">
+                      <a class="submenu-product-card__link" href="javascript:void(0);">
+                        <h3 class="submenu-product-card__title">Чернослив в шоколаде "Русь Православная" Саров</h3>
+                        <div class="submenu-product-card__img-wrapper">
+                          <img alt="Коробка конфет" class="submenu-product-card__img" height="111"
+                            src="img/product-second.jpg" width="153">
+                        </div>
+                        <p class="submenu-product-card__price">340 ₽</p>
+                      </a>
+                    </article>
+                  </li>
+                  <li class="submenu-products__item">
+                    <article class="submenu-product-card">
+                      <a class="submenu-product-card__link" href="javascript:void(0);">
+                        <h3 class="submenu-product-card__title">Чернослив в шоколаде "Русь Православная" Саров</h3>
+                        <div class="submenu-product-card__img-wrapper">
+                          <img alt="Коробка конфет" class="submenu-product-card__img" height="111"
+                            src="img/product-second.jpg" width="153">
+                        </div>
+                        <p class="submenu-product-card__price">340 ₽</p>
+                      </a>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--with-submenu" href="#" aria-haspopup="true" aria-controls="submenu-2"
+                aria-expanded="false">Шоколад по вкусу</a>
+              <div class="menu__submenu submenu" id="submenu-2">
+                Привет мир
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Шоколад по типу</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Все продукты</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="page-main__wrapper page-main__wrapper--bg">
+      <section class="page-main__section cabinet">
+        <h1 class="page-main__title cabinet__title">Личный кабинет</h1>
+        <div class="cabinet__header">
+          <a href="javascript:void(0);" class="cabinet__exit">
+            <svg width="18" height="18" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-exit"></use>
+            </svg>
+            Выход из аккаунта
+          </a>
+          <ul class="cabinet__menu cabinet-menu">
+            <li class="cabinet-menu__item">
+              <a href="javascript:void(0);" class="cabinet-menu__link">
+                <svg width="18" height="18" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+                Личные данные
+              </a>
+            </li>
+            <li class="cabinet-menu__item">
+              <a href="javascript:void(0);" class="cabinet-menu__link">
+                <svg width="21" height="21" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-orders"></use>
+                </svg>
+                Заказы
+              </a>
+            </li>
+            <li class="cabinet-menu__item">
+              <a class="cabinet-menu__link cabinet-menu__link--active">
+                <svg width="19" height="19" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+                Подписки
+              </a>
+            </li>
+          </ul>
+        </div>
+        <form action="javascript:void(0)" method="POST" class="cabinet__subscriptions subscriptions form">
+          <fieldset class="subscriptions__checkbox-block">
+            <legend class="form__title">Ваши подписки</legend>
+            <label class="subscriptions__checkbox custom-checkbox">
+              <input type="checkbox" name="subscriptions-1" class="custom-checkbox__input visually-hidden">
+              <span class="custom-checkbox__status"></span>
+              <span class="custom-checkbox__text">Подписка на новости</span>
+            </label>
+            <label class="subscriptions__checkbox custom-checkbox">
+              <input type="checkbox" name="subscriptions-2" class="custom-checkbox__input visually-hidden">
+              <span class="custom-checkbox__status"></span>
+              <span class="custom-checkbox__text">Подписка на что-нибудь еще</span>
+            </label>
+            <label class="subscriptions__checkbox custom-checkbox">
+              <input type="checkbox" name="subscriptions-3" class="custom-checkbox__input visually-hidden">
+              <span class="custom-checkbox__status"></span>
+              <span class="custom-checkbox__text">Подписка на что-нибудь еще</span>
+            </label>
+          </fieldset>
+          <div class="subscriptions__email">
+            <label class="form__label subscriptions__label">
+              Email для подписки
+              <input type="email" name="subscriptions-email" class="form__input" value="Alexander.Makedonski@gmail.com">
+            </label>
+            <button type="submit" class="button subscriptions__button">
+              <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-edit"></use>
+              </svg>
+              Изменить e-mail
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <div class="page-footer__social-network social-network">
+        <div class="social-network__wrapper">
+          <h3 class="social-network__title">Наши соцсети</h3>
+          <div class="social-network__group-wrapper">
+            <div class="social-network__group">
+              <a class="social-network__btn" href="#">
+                <svg width="20" height="11" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+              <a class="social-network__btn" href="#">
+                <svg width="9" height="17" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
+                <span class="visually-hidden">Facebook</span>
+              </a>
+              <a class="social-network__btn" href="#">
+                <svg width="18" height="18" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-inst"></use>
+                </svg>
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="social-network__description">
+          <h3 class="social-network-description__title">САРОВСКИЙ ШОКОЛАД ®</h3>
+          <p class="social-network-description__text">Официальный сайт классических конфет в коробках и ручной работы, а
+            также шоколада в плитках. Выбирайте и
+            покупайте онлайн.</p>
+        </div>
+      </div>
+      <div class="page-footer__contacts footer-contacts">
+        <div class="footer-contacts__container">
+          <h3 class="footer-contacts__title">Контакты</h3>
+          <a href="tel:84952781140" class="footer-contacts__link footer-contacts__link--tel">
+            <svg class="footer-contacts__img" width="18" height="18" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-dispatcher"></use>
+            </svg>
+            8 (495) 278-11-40</a>
+          <a href="mailto:sarovshocolate@yandex.ru"
+            class="footer-contacts__link footer-contacts__link--email">sarovshocolate@yandex.ru</a>
+        </div>
+      </div>
+      <div class="page-footer__menu footer-menu footer-menu--left">
+        <h3 class="footer-menu__title">Шоколад</h3>
+        <ul class="footer-menu__wrapper footer-menu-product">
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">Тёмный</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">Молочный</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">С фруктами</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">С орехами</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">С начинками</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">Сувениры</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__menu footer-menu footer-menu--right">
+        <h3 class="footer-menu__title">Информация</h3>
+        <ul class="footer-menu__wrapper footer-menu-info">
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">Как заказать</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">Доставка и оплата</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">Гарантия</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">Конфиденциальность</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#">Карта сайта</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__payment footer-payment">
+        <span class="footer-payment__item">Принимаем к оплате:</span>
+        <img class="footer-payment__item" src="img/icon-visa.svg" alt="Карты Visa" width="34" height="24">
+        <img class="footer-payment__item" src="img/icon-master-card.svg" alt="Карты Master Card" width="37" height="23">
+      </div>
+      <div class="footer-description">
+        <h3 class="footer-description__title">Саровский Шоколад ®</h3>
+        <p class="footer-description__text">Официальный сайт классических конфет в коробках и ручной работы, а также
+          шоколада в плитках. Выбирайте и
+          покупайте онлайн.</p>
+      </div>
+      <div class="page-footer__copyright footer-copyright">
+        <a class="footer-copyright__link" href="#">
+          <svg width="8" height="12" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
+          </svg>
+          Перейти на информационный сайт
+          <svg width="8" height="12" style="transform: rotate(180deg);" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

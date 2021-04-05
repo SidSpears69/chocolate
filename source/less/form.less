@@ -99,11 +99,13 @@
   border: 1px solid @grey-stroke;
   color: inherit;
   font: inherit;
-  padding: 11px 19px;
+  padding: 11px;
   margin-top: 5px;
   font-size: 16px;
   font-weight: bold;
-
+  @media (min-width: @tablet-width) {
+    padding: 11px 19px;
+  }
   &--textarea {
     height: 135px;
     resize: none;
