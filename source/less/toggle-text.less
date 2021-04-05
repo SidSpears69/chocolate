@@ -1,0 +1,12 @@
+.toggle-text {
+  &[aria-expanded = "true"] {
+    .toggle-text__hide {
+      display: none;
+    }
+  }
+  &[aria-expanded = "false"] {
+    .toggle-text__open {
+      display: none;
+    }
+  }
+}

@@ -14,6 +14,8 @@ const searchToggle = search.querySelector('.user-menu-search__btn');
 const searchInput = search.querySelector('.user-menu-search__input');
 const ordersForm = document.querySelector(".order-registration");
 const ordersPopupClose = document.querySelector(".modal__button");
+const cabinetToggleProducts = document.querySelectorAll(".cabinet-order__toggle-products")
+
 menuToggle.addEventListener('click', (evt) => {
   const toggler = evt.target;
   toggler.getAttribute("aria-expanded") == "false" ? toggler.setAttribute("aria-expanded", true) : toggler.setAttribute("aria-expanded", false);
@@ -23,11 +25,13 @@ menuToggle.addEventListener('click', (evt) => {
 })
 const controlGroupAttributes = (elements, item, attribute) => {
   item.addEventListener("click", (evt) => {
+    console.log(evt.currentTarget);
     elements.forEach(item => {
-      if (item != evt.target) {
+      if (item != evt.currentTarget) {
         item.setAttribute(attribute, false);
       }
     })
+    console.log(item);
     item.getAttribute(attribute) == "true" ? item.setAttribute(attribute, false) : item.setAttribute(attribute, true);
   })
 }
@@ -144,4 +148,6 @@ ordersForm && ordersForm.addEventListener("submit", (evt) => {
     modal.close('popup-order');
   })
 })
-
+cabinetToggleProducts.forEach(item => {
+  controlGroupAttributes(cabinetToggleProducts, item, "aria-expanded");
+})
