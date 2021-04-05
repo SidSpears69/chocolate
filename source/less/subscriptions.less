@@ -31,7 +31,12 @@
   align-items: center;
   margin-bottom: 15px;
   margin-top: 15px;
-
+  @media (min-width: @desktop-width) {
+   &:hover,
+   &:focus {
+     color: @accent;
+   }
+  }
   & svg {
     margin-right: 8px;
   }

@@ -1,0 +1,41 @@
+.map-popup {
+  position: absolute;
+  top: 27px;
+  width: 380px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  background-color: @white;
+  max-width: 95%;
+  &::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: @white;
+    left: 50%;
+    right: 50%;
+    bottom: -7px;
+    position: absolute;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+.map-popup__close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border: none;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    color: @grey-text;
+    @media (min-width: @desktop-width) {
+      &:hover,
+      &:focus {
+        color: @accent;
+      }
+    }
+}
+
