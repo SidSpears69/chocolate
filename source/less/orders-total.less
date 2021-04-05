@@ -11,6 +11,12 @@
 .orders-total__checkbox a {
   color: #D25C5C;
   text-decoration: none;
+  @media (min-width: @desktop-width) {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
 .orders-total__checkbox {
   margin-bottom: 27px;

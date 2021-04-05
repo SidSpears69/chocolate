@@ -4,7 +4,9 @@
   width: 100%;
   justify-content: space-between;
   display: none;
-  &--opened {
-    display: flex;
+  @media (min-width: @desktop-width){
+    &--opened {
+      display: flex;
+    }
   }
 }

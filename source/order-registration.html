@@ -8,7 +8,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="vendors/graph-modal/graph-modal.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Document</title>
@@ -26,7 +25,7 @@
         </a>
         <div class="main-nav__user-menu user-menu">
           <div class="user-menu__item user-menu-search">
-            <button class="user-menu-search__btn" aria-controls="search-form" aria-expanded="false">
+            <button class="user-menu-search__btn" aria-haspopup="true" aria-controls="search-form" aria-expanded="false">
               <svg class="search-icon" width="20" height="20" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#icon-search"></use>
               </svg>
@@ -63,13 +62,13 @@
         </div>
         <div class="main-nav__menu menu">
           <a class="menu__profile profile" href="#">Войти</a>
-          <button class="menu__toggle" type="button" aria-controls="site-list" aria-expanded="false">Меню</button>
+          <button class="menu__toggle" type="button" aria-haspopup="true" aria-controls="site-list" aria-expanded="false">Меню</button>
           <ul class="menu__items" id="site-list">
             <li class="menu__item">
               <a class="menu__link" href="#">Идеи для подарков</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link menu__link--with-submenu" href="#" aria-controls="submenu-1"
+              <a class="menu__link menu__link--with-submenu" href="#" aria-haspopup="true" aria-controls="submenu-1"
                 aria-expanded="false">Линейка продукции</a>
               <div class="menu__submenu submenu" id="submenu-1">
                 <div class="submenu__menu-items">
@@ -183,7 +182,7 @@
               </div>
             </li>
             <li class="menu__item">
-              <a class="menu__link menu__link--with-submenu" href="#" aria-controls="submenu-2"
+              <a class="menu__link menu__link--with-submenu" href="#" aria-haspopup="true" aria-controls="submenu-2"
                 aria-expanded="false">Шоколад по вкусу</a>
               <div class="menu__submenu submenu" id="submenu-2">
                 Привет мир
@@ -202,11 +201,11 @@
   </header>
   <main class="page-main">
     <div class="page-main__wrapper page-main__wrapper--bg">
-      <section class="page-main__section">
+      <section class="page-main__section form">
         <h1 class="page-main__title">Оформление заказа</h1>
         <form action="javascript:void(0)" method="POST" class="order-registration">
-          <fieldset class="order-registration__contacts form">
-            <legend class="order-registration__title">Контактная информация</legend>
+          <fieldset class="order-registration__contacts">
+            <legend class="form__title">Контактная информация</legend>
             <label class="form__label form__label--full-width">
               Имя <span class="form__required">*</span>
               <input type="text" name="order-name" class="form__input" required>
@@ -249,11 +248,11 @@
               </label>
               <label class="form__label form__label--small-width">
                 Квартира
-                <input type="text" name="order-house" class="form__input">
+                <input type="text" name="order-room" class="form__input">
               </label>
               <label class="form__label form__label--small-width">
                 Этаж
-                <input type="text" name="order-house" class="form__input">
+                <input type="text" name="order-floor" class="form__input">
               </label>
             </div>
             <label class="form__label form__label--full-width">
@@ -264,7 +263,7 @@
           <div class="order-registration__orders orders">
             <div class="orders__info">
               <div class="orders__block">
-                <h3 class="order-registration__title">Заказ:</h3>
+                <h3 class="form__title">Заказ:</h3>
                 <div class="orders__name-order">
                   <p class="orders__text">Чернослив в шоколаде "Русь Православная" Саров</p>
                   <p class="orders__price">340 ₽ x 2</p>
@@ -275,7 +274,7 @@
                 </div>
               </div>
               <fieldset class="orders__block">
-                <legend class="order-registration__title">Способ доставки:</legend>
+                <legend class="form__title">Способ доставки:</legend>
                 <label class="orders__radio custom-radio">
                   <input type="radio" name="orders-delivery" value="Самовывоз"
                     class="custom-radio__input visually-hidden">
@@ -292,7 +291,7 @@
                 </label>
               </fieldset>
               <fieldset class="orders__block">
-                <legend class="order-registration__title">Способ оплаты:</legend>
+                <legend class="form__title">Способ оплаты:</legend>
                 <label class="orders__radio custom-radio">
                   <input type="radio" name="orders-payment" value="Наличными при получении"
                     class="custom-radio__input visually-hidden">
@@ -454,8 +453,6 @@
       </div>
     </div>
   </footer>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="vendors/custom-number.js/custom-number.js"></script>
   <script src="vendors/graph-modal/graph-modal.min.js"></script>
   <script src="js/script.js"></script>
 </body>

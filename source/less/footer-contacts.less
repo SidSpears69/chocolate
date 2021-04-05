@@ -33,6 +33,12 @@
       transform: translateY(-50%);
       left: 0;
     }
+    @media (min-width: @desktop-width) {
+      &:hover,
+      &:focus {
+        color:  @accent;
+      }
+    }
   }
 
   &--email {
@@ -43,6 +49,12 @@
     color: #d25c5c;
     margin-left: 35px;
     border-bottom: 1px solid fade(#d25c5c, 10%);
+    @media (min-width: @desktop-width) {
+      &:hover,
+      &:focus {
+        color:  @accent;
+      }
+    }
   }
 }
 .footer-contacts__title {
