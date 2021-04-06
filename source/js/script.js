@@ -163,5 +163,6 @@ cityListButton.forEach(item => {
     })
     item.classList.add("city-list__button--active");
     contactsListToggle.setAttribute("aria-expanded", false);
+    contactsListToggle.textContent = item.textContent;
   })
 })
