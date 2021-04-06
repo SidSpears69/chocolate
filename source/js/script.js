@@ -14,7 +14,10 @@ const searchToggle = search.querySelector('.user-menu-search__btn');
 const searchInput = search.querySelector('.user-menu-search__input');
 const ordersForm = document.querySelector(".order-registration");
 const ordersPopupClose = document.querySelector(".modal__button");
-const cabinetToggleProducts = document.querySelectorAll(".cabinet-order__toggle-products")
+const cabinetToggleProducts = document.querySelectorAll(".cabinet-order__toggle-products");
+
+const contactsListToggle = document.querySelector(".contacts__button");
+const cityListButton = document.querySelectorAll(".city-list__button");
 
 menuToggle.addEventListener('click', (evt) => {
   const toggler = evt.target;
@@ -25,13 +28,11 @@ menuToggle.addEventListener('click', (evt) => {
 })
 const controlGroupAttributes = (elements, item, attribute) => {
   item.addEventListener("click", (evt) => {
-    console.log(evt.currentTarget);
     elements.forEach(item => {
       if (item != evt.currentTarget) {
         item.setAttribute(attribute, false);
       }
     })
-    console.log(item);
     item.getAttribute(attribute) == "true" ? item.setAttribute(attribute, false) : item.setAttribute(attribute, true);
   })
 }
@@ -150,4 +151,17 @@ ordersForm && ordersForm.addEventListener("submit", (evt) => {
 })
 cabinetToggleProducts.forEach(item => {
   controlGroupAttributes(cabinetToggleProducts, item, "aria-expanded");
+})
+contactsListToggle && contactsListToggle.addEventListener("click", (evt) => {
+  const button = evt.target;
+  button.getAttribute("aria-expanded") == "true" ? button.setAttribute("aria-expanded", false) : button.setAttribute("aria-expanded", true);
+})
+cityListButton.forEach(item => {
+  item.addEventListener("click", () => {
+    cityListButton.forEach(item => {
+      item.classList.remove("city-list__button--active");
+    })
+    item.classList.add("city-list__button--active");
+    contactsListToggle.setAttribute("aria-expanded", false);
+  })
 })

@@ -39,6 +39,12 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  &[aria-expanded="true"] {
+    border-bottom-color: @accent;
+    & + .contacts__city {
+      display: block;
+    }
+  }
 }
 .contacts__map {
   margin-bottom: 44px;
@@ -59,4 +65,11 @@
   @media (min-width: @desktop-width) {
     max-width: 400px;
   }
+}
+.contacts__city {
+  background: @white;
+  border: 1px solid @grey-stroke;
+  border-top: none;
+  padding: 20px;
+  display: none;
 }
